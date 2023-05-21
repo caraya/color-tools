@@ -15,10 +15,10 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 
-function handleFormSubmit(event) {
+function handleFormSubmit(e) {
   const color = document.getElementById('colorInput').value;
   processInput(color);
-  event.preventDefault();
+  e.preventDefault();
 }
 
 function handleFormReset() {
@@ -32,3 +32,10 @@ function handleFormReset() {
 
 document.getElementById('colorForm').addEventListener('submit', handleFormSubmit);
 document.getElementById('colorForm').addEventListener('reset', handleFormReset);
+
+const colorInput = document.getElementById('colorInput');
+colorInput.addEventListener("keydown", (e) => {
+  if (e.key === 'Enter') {
+    handleFormSubmit;
+  }
+});
