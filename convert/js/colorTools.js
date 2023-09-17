@@ -7,6 +7,7 @@ import {
 	sRGB,
 	P3,
   Lab,
+  LCH,
   OKLab,
 	OKLCH,
   HWB,
@@ -17,6 +18,7 @@ import {
 ColorSpace.register(sRGB); // sRGB can parse keywords and hex colors
 ColorSpace.register(P3); // p3
 ColorSpace.register(Lab); // LAB
+ColorSpace.register(LCH); // LCH
 ColorSpace.register(OKLab); // OKLab
 ColorSpace.register(OKLCH);// OKLCH
 ColorSpace.register(HWB); // hwb
@@ -53,6 +55,7 @@ export function processInput(color) {
   buildColorBlock(color, 'sRGB');
   buildColorBlock(color, 'P3');
   buildColorBlock(color, 'Lab');
+  buildColorBlock(color, 'LCH');
   buildColorBlock(color, 'hwb');
   buildColorBlock(color, 'hsl');
   buildColorBlock(color, 'OKLab');
