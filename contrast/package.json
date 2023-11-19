@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^4.3.9"
+    "vite": "^5.0.0"
   },
   "dependencies": {
     "colorjs.io": "^0.4.4-patch.1"
